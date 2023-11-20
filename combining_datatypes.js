@@ -104,4 +104,39 @@ const vendingMachine = {
 
 vendingMachine.vend(2)
 
+
+
 //******************************* CALLBACKS */
+
+
+const add = (num1, num2) => {
+    let numSum = num1 + num2
+    console.log(numSum)
+}
+add(10, 20)
+
+
+const subtract = (num1, num2) => {
+    let numSubtract = num1 - num2
+    console.log(numSubtract)
+}
+subtract(10, 20)
+
+
+const multiply = (num1, num2) => {
+    let numMultiply = num1 * num2
+    console.log(numMultiply)
+}
+multiply(10, 20)
+
+
+const divide = (num1, num2) => {
+    let numDivide = num1 / num2
+    console.log(numDivide)
+}
+divide(10, 20)
+
+const calculate = (operates) => {
+    operates(400, 20)
+}
+calculate(subtract)
