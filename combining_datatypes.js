@@ -112,6 +112,7 @@ vendingMachine.vend(2)
 const add = (num1, num2) => {
     let numSum = num1 + num2
     console.log(numSum)
+    return numSum
 }
 add(10, 20)
 
@@ -119,6 +120,7 @@ add(10, 20)
 const subtract = (num1, num2) => {
     let numSubtract = num1 - num2
     console.log(numSubtract)
+    return numSubtract
 }
 subtract(10, 20)
 
@@ -126,6 +128,7 @@ subtract(10, 20)
 const multiply = (num1, num2) => {
     let numMultiply = num1 * num2
     console.log(numMultiply)
+    return numMultiply
 }
 multiply(10, 20)
 
@@ -133,10 +136,49 @@ multiply(10, 20)
 const divide = (num1, num2) => {
     let numDivide = num1 / num2
     console.log(numDivide)
+    return numDivide
 }
-divide(10, 20)
+divide(440, 20)
 
-const calculate = (operates) => {
-    operates(400, 20)
+const calculate = (num1, num2, operates) => {
+    return operates(num1, num2)
 }
-calculate(subtract)
+calculate(40, 40, add)
+calculate(500, 100, subtract)
+calculate(10, 50, multiply)
+calculate(100, 50, divide)
+
+
+// Function definition placement
+// Clean up this code, so that it works and has function definitions in the correct place
+// Invoke functions at the bottom of the code written.
+
+
+const bar = () => {
+    console.log('bar here');
+}
+
+const foo = () => {
+    console.log('foo here');
+}
+
+bar();
+foo();
+
+
+// Error reading
+// What is meant by the error(s) this produces?
+// SyntaxError: Missing initializer in const declaration is the error this produces. We need to initialize the variable const
+// with an equal sign after 'const foo'
+// We then get 'ReferenceError: Cannot access 'foo' before initialization at Object. We need to invoke the function
+// after the function is written not before, to be able to access the function foo.
+
+
+// foo();
+
+// const foo =()=>{
+//     console.log('hi');
+// }
+
+
+
